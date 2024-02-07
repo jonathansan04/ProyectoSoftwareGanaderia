@@ -10,12 +10,14 @@ const Publicidad =() =>{
         </h3>
 
         <div className="container mt-5">
+        <div className="card p-3">
             <p>Nombre:</p>
             <p>Logo:</p>
             <p>Descripción:</p>
             <p>Servicios:</p>
             <p>Lugar:</p>
             <p>Contacto:</p>
+        </div>
         </div>
         </div>
     )
