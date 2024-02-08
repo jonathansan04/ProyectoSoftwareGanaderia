@@ -1,0 +1,37 @@
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[
+    backend=biber,
+    style=apa,
+  ]{biblatex}
+\usepackage[skip=10pt plus1pt, indent=40pt]{parskip}
+\usepackage{ragged2e}
+\usepackage{import}
+\usepackage{epstopdf}
+\usepackage{csquotes}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{caption}
+ %esto es lo nuevo que agregue
+\newcommand\fnote[1]{\captionsetup{font=small}\caption*{#1}}
+\usepackage[flushleft]{threeparttable}
+% ESTOS PAQUETES SON PARA GENERAR LOS TEXTOS DUMMY, SE PUEDEN ELIMINAR 
+\usepackage{blindtext}
+\usepackage{lipsum}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor = black,
+    urlcolor = blue
+}
+
+
+
+% maps cite commands to biblatex commands
+\let \citeNP \cite
+\let \citeA \textcite
+\let \cite \parencite
+
+\bibliography{bibliography}
+
