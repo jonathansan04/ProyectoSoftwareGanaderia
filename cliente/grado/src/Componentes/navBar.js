@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './Todo.css';
 
 const links = [
     {
@@ -33,8 +32,8 @@ const NavBar =() =>{
     return (
         <div className="Cabecera">
 
-        { links.map((X) =>(
-                <Link to={X.href}>
+        { links.map((X,i) =>(
+                <Link key={i} to={X.href}>
                 {X.name}
                 </Link>
             ))
