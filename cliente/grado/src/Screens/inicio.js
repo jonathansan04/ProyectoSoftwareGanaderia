@@ -9,6 +9,7 @@ const Inicio =() =>{
             Buenaaass
 
             Información de Inicio..
+            
         </h3>
         </div>
     )

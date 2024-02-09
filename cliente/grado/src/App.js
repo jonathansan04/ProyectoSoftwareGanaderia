@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState}from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Contact from "./Screens/contacto";
 import Inicio from "./Screens/inicio";
@@ -13,6 +13,8 @@ import './Todo.css';
 
 function App() {
 
+
+      
   let show = (id) => document.getElementById(id).classList.remove('hide');
 
   return (
@@ -20,7 +22,7 @@ function App() {
 
       <div >
         <div className="row">
-          <div className="container mt-5">
+          <div className="titulo">
 
             <h1>Software ganadero</h1>
 
@@ -33,16 +35,22 @@ function App() {
       <div className="sign">
         <button id="btnsignup" onClick={() => show("popsignup")}>Sign up</button>
         <button id="btnsignin" onClick={() => show("popsignin")}>Sign in</button>
-      </div>
+      </div >
 
-      <h3>LLeva la mejor solución para el manejo de tú ganaderia</h3>
-      <div>
-        <Router>
+      <h3 className="slogan">LLeva la mejor solución para el manejo de tú ganaderia</h3>
+      <div >
+        <Router >
+          <nav className="navv">
+          <button className="nav-boton" >Menú</button>
 
           <NavBar />
 
-          <Routes>
+          </nav>
 
+          
+
+          <Routes>
+            
             <Route path="/home" element={<Inicio />} />
 
             <Route path="funcion" element={< Funcion />} />
@@ -56,6 +64,7 @@ function App() {
           </Routes>
         </Router>
       </div>
+   
     </div>
 
 

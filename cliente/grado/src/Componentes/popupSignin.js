@@ -5,19 +5,29 @@ export default function PopupSignup() {
 
     return (
         <div id="popsignin" className="popup hide" onClick={hide}>
-            <div className="wrapper">
-                <h3>Ingresar</h3>
+            <div >
+            <div className="close-btn">%times;</div>
+            <div className="form">
+                <h2>Iniciar sesion</h2>
                 <form>
-                    <div>
-                        <label>Usuario: </label>
-                        <input type="text" />
-                    </div>
-                    <div>
-                        <label>Contraseña: </label>
-                        <input type="password" />
-                    </div>
-                    <button type="submit">Aceptar</button>
+                <div className="form-element">
+                  <label for="email">Email</label>
+                  <input type="text" id="email" placeholder="Ingresar Email"/>
+                </div>
+                <div className="form-element">
+                  <label for="password">Password</label>
+                  <input type="password" id="password" placeholder="Ingresar contraseña"/>
+                </div>
+                <div className="form-element">
+                  <input type="checkbox" id="remember-me"/>
+                  <label for="remember-me">Recordar</label>
+                </div>
+                <div className="form-element">
+                  <button type='submit'>Iniciar</button>
+                </div>
+                  
                 </form>
+            </div>
             </div>
         </div>
     )

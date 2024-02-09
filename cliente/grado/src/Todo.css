@@ -1,14 +1,30 @@
-.Cabecera {
+
+.Cabecera{
+    left: 20px;
     width: 100%;
-    background-color: greenyellow;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    background: greenyellow;
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    justify-content: space-between;
     align-items: center;
     font-weight: bolder;
     background-size: auto;
     font-style: italic;
+}
 
+
+.Cabecera:hover{
+    background-color: rosybrown;
+}
+
+.navv{
+    background:rgb(169, 26, 26);
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .Cabecera-botom{
@@ -74,7 +90,7 @@ body{
 .sign{
     width: auto;
     position: absolute;
-    top: 15px;
+    top: 40px;
     right: 15px;
 }
 
@@ -83,9 +99,78 @@ body{
     font-size: 15px;
     font-weight: 600;
     color: #333;
-    background: #6d4cff;
-    border: black 1px solid;
+    background: #f5f5f5;
+    border: rgb(0, 0, 0) 1px solid;
     cursor: pointer;
     border-radius: 3px;
     margin: 0 5px;
+}
+
+.nav-boton{
+    background: salmon;
+    color: #f5f5f5;
+    padding: 10px 0;
+    border: 2px solid beige;
+    display: none;
+}
+
+.titulo{
+    font-weight: 900;
+    font-style: italic;
+    font-size: larger;
+    color: #333;
+}
+
+.slogan{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media (max-width: 600px){
+
+    .titulo{
+        font-size: 1px;
+        color:#333;
+        font-style: oblique;
+    }
+
+    .sign{
+        width: auto;
+        position: absolute;
+        top: 10px;
+        right: -50px;
+        width: 50%;
+    }
+    .sign button{
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 200;
+        color: #333;
+        background: #f5f5f5;
+        border: rgb(0, 0, 0) 1px solid;
+        cursor: pointer;
+        border-radius: 3px;
+        margin: 0 5px;
+    }
+    
+    .slogan{
+        font-size: smaller;
+    }
+    .navv{
+        background: #3a7bd5;
+        flex-direction: column;
+        
+    }
+    .Cabecera{
+        background: white;
+        flex-direction: column;
+        margin: 10px 0;
+        text-decoration: none;
+        
+    }
+    .nav-boton{
+        display: inline-block;
+    }
+    .nav-desaparece{
+        display: none;
+    }
 }
