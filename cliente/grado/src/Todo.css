@@ -17,11 +17,11 @@
 
 
 .Cabecera:hover{
-    background-color: rosybrown;
+    background-color: rgb(129, 158, 174);
 }
 
 .navv{
-    background:rgb(169, 26, 26);
+    background:rgb(55, 138, 155);
     padding: 10px 15px;
     display: flex;
     justify-content: space-around;
@@ -59,7 +59,7 @@
 }
 
 body{
-    background:linear-gradient(to right, #3a7bd5,#3a6073);
+    background-image: url('../Imagenes/imagfondo.jpeg');
     font-family: "Raleway",sans-serif;
 }
 
