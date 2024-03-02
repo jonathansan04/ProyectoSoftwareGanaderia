@@ -1,88 +1,74 @@
-import React from "react";
-import {Route, BrowserRouter as Router, Routes} from "react-router-dom";
-import NavBar from "./Componentes/NavBar";
-import Contact from "./Screens/Contacto";
-import Inicio from "./Screens/Inicio";
-import Funcion from "./Screens/Funcion";
-import Quienes from "./Screens/Quienes";
-import './Componentes/Todo.css';
-import Publicidad from "./Screens/Publicidad";
-
+import React, {useState}from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Contact from "./Screens/contacto";
+import Inicio from "./Screens/inicio";
+import Funcion from "./Screens/funcion";
+import Quienes from "./Screens/quienes";
+import Publicidad from "./Screens/publicidad";
+import PopupSignup from "./Componentes/popupSignup";
+import PopupSignin from "./Componentes/popupSignin";
+import NavBar from "./Componentes/navBar";
+import './Todo.css';
 
 
 function App() {
 
+
+      
+  let show = (id) => document.getElementById(id).classList.remove('hide');
+
   return (
     <div className="App">
-      <div>
-      
-      <div>
-        <div >  
-          <div className="row">
-          <div className="container mt-5">
-       
+
+      <div >
+        <div className="row">
+          <div className="titulo">
+
             <h1>Software ganadero</h1>
-           
-           </div>
-            <div className="Cabecera-ubi">
-            <table>
-            <tr>
-              <td>
-              <label>Usuario:</label> <br></br>
-              <label>Contraseña:</label>
-              </td>
-              <td>
-              <input className='Cabecera-input'  id="inputcontra" />
-              
-              <input  className='Cabecera-input' type="password" id="inputusuario" />
-            
-              </td>
-              <td>
-                <a href="http://localhost:3000/registrar" target="_parent">
-                <button className="Cabecera-botom" >Iniciar sesion </button>
-                </a>
-              
-              
-              <button id="show-login" className="Cabecera-botom" >Registrarse </button>
-              
-            
-              </td>
-            </tr>
 
-            </table>    
-           
-            </div>
           </div>
-           </div>
-           </div>
-     
+          <PopupSignup />
+          <PopupSignin />
+        </div>
       </div>
-      
 
-      <h3>LLeva la mejor solución para el manejo de tú ganaderia</h3>
-      <div>
-      <Router>
-      <NavBar/>
-      
-      <Routes>
-        
-        <Route path="/home" element={<Inicio/>}/>
-        
-        <Route path="funcion" element={< Funcion/>}/>
+      <div className="sign">
+        <button id="btnsignup" onClick={() => show("popsignup")}>Sign up</button>
+        <button id="btnsignin" onClick={() => show("popsignin")}>Sign in</button>
+      </div >
 
-        <Route path="/quienes" element={<Quienes/>}/>
-        
-        <Route path="/publicidad" element={< Publicidad/>}/>
+      <h3 className="slogan">LLeva la mejor solución para el manejo de tú ganaderia</h3>
+      <div >
+        <Router >
+          <nav className="navv">
+          <button className="nav-boton" >Menú</button>
 
-        <Route path="/contact" element={< Contact/>}/>
-       
-      </Routes>
-      </Router>
+          <NavBar />
+
+          </nav>
+
+          
+
+          <Routes>
+            
+            <Route path="/home" element={<Inicio />} />
+
+            <Route path="funcion" element={< Funcion />} />
+
+            <Route path="/quienes" element={<Quienes />} />
+
+            <Route path="/publicidad" element={< Publicidad />} />
+
+            <Route path="/contact" element={< Contact />} />
+
+          </Routes>
+        </Router>
       </div>
-    </div>
-      
-      
    
+    </div>
+
+
+
 
 
   );

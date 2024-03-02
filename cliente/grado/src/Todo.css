@@ -1,0 +1,176 @@
+
+.Cabecera{
+    left: 20px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    background: greenyellow;
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+    background-size: auto;
+    font-style: italic;
+}
+
+
+.Cabecera:hover{
+    background-color: rgb(129, 158, 174);
+}
+
+.navv{
+    background:rgb(55, 138, 155);
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Cabecera-botom{
+    width: 60%;
+    align-items: left;
+    font-weight: bolder;
+    align-self: baseline;
+    justify-content: flex-end;
+}
+
+.Cabecera-lab{
+    width:  50%;
+}
+
+.Cabecera-input{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: right;
+    font-weight: bolder;
+    align-self: baseline;
+    justify-content: flex-end;
+    width:  60%;
+    
+}
+
+.Cabecera-ubi{
+
+    position: fixed;
+    left: 40%;
+    top: 1%;
+
+}
+
+body{
+    background-image: url('../Imagenes/imagfondo.jpeg');
+    font-family: "Raleway",sans-serif;
+}
+
+.center{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.center button{
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #222;
+    background: #f5f5f5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.App{
+    position: relative;
+}
+
+.sign{
+    width: auto;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+}
+
+.sign button{
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    background: #f5f5f5;
+    border: rgb(0, 0, 0) 1px solid;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.nav-boton{
+    background: salmon;
+    color: #f5f5f5;
+    padding: 10px 0;
+    border: 2px solid beige;
+    display: none;
+}
+
+.titulo{
+    font-weight: 900;
+    font-style: italic;
+    font-size: larger;
+    color: #333;
+}
+
+.slogan{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media (max-width: 600px){
+
+    .titulo{
+        font-size: 1px;
+        color:#333;
+        font-style: oblique;
+    }
+
+    .sign{
+        width: auto;
+        position: absolute;
+        top: 10px;
+        right: -50px;
+        width: 50%;
+    }
+    .sign button{
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 200;
+        color: #333;
+        background: #f5f5f5;
+        border: rgb(0, 0, 0) 1px solid;
+        cursor: pointer;
+        border-radius: 3px;
+        margin: 0 5px;
+    }
+    
+    .slogan{
+        font-size: smaller;
+    }
+    .navv{
+        background: #3a7bd5;
+        flex-direction: column;
+        
+    }
+    .Cabecera{
+        background: white;
+        flex-direction: column;
+        margin: 10px 0;
+        text-decoration: none;
+        
+    }
+    .nav-boton{
+        display: inline-block;
+    }
+    .nav-desaparece{
+        display: none;
+    }
+}
