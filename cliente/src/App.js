@@ -37,7 +37,7 @@ function App() {
         <button id="btnsignin" onClick={() => show("popsignin")}>Sign in</button>
       </div >
 
-      <h3 className="slogan">LLeva la mejor solución para el manejo de tú ganaderia</h3>
+      <h3 className="slogan">Lleva la mejor solución para el manejo de tú ganaderia</h3>
       <div >
         <Router >
           <nav className="navv">

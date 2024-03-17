@@ -60,7 +60,12 @@
 
 body{
     background-image: url('../Imagenes/imagfondo.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     font-family: "Raleway",sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .center{
