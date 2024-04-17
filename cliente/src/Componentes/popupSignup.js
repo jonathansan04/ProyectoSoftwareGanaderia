@@ -17,19 +17,19 @@ export default function PopupSignup() {
         <form>
           <h2>Registrarse</h2>
           <div className="form-element">
-            <label for="nombre">Nombre</label>
+            <label htmlFor="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" placeholder="Ingresar Nombre" />
           </div>
           <div className="form-element">
-            <label for="apellido">Apellido</label>
+            <label htmlFor="apellido">Apellido</label>
             <input type="text" id="apellido" name="apellido" placeholder="Ingresar Apellido" />
           </div>
           <div className="form-element">
-            <label for="celular">Celular</label>
+            <label htmlFor="celular">Celular</label>
             <input type="text" id="celular" name="celular" placeholder="Ingresar numero de celular" />
           </div>
           <div className="form-element">
-            <label for="tipoid">Tipo de ID</label>
+            <label htmlFor="tipoid">Tipo de ID</label>
             <select id="tipoid" name="tipoid">
               <option > </option>
               <option value="Cedula de ciudadania">Cedula de ciudadania</option>
@@ -37,15 +37,15 @@ export default function PopupSignup() {
             </select>
           </div>
           <div className="form-element">
-            <label for="numeroid">Número ID</label>
+            <label htmlFor="numeroid">Número ID</label>
             <input type="text" id="numeroid" name="numeroid" placeholder="Ingresar número ID" />
           </div>
           <div className="form-element">
-            <label for="correo">Email</label>
+            <label htmlFor="correo">Email</label>
             <input type="text" id="correo" name="correo" placeholder="Ingresar Email" />
           </div>
           <div className="form-element">
-            <label for="contraseña">Contraseña</label>
+            <label htmlFor="contraseña">Contraseña</label>
             <input type="password" id="contraseña" name="contraseña" placeholder="Ingresar contraseña" />
           </div>
           <button type="submit" onClick={submit}>Aceptar</button>

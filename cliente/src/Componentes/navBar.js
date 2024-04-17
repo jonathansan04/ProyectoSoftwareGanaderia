@@ -5,7 +5,7 @@ import '../Todo.css'
 const links = [
     {
         name:"Inicio",
-        href: "/home",
+        href: "/inicio",
     },
     {
         name:"¿Como funciona?",
