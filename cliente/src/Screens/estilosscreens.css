@@ -1,3 +1,5 @@
+/*Estilos para publicidad*/
+
 .contenedor{
   margin: 0 auto;
   width: 90%;
@@ -19,4 +21,29 @@
     border-radius: 5px;
     box-shadow: 5px 5px gray;
 }
+/*Estilos para funcion.js*/
 
+.funcioninput{
+ background: rgb(187, 179, 179);
+ height: 300px;
+ width: 500px;
+ padding: 5px;
+ border-radius: 5px;
+ margin: 10px;
+
+}
+.funlabel{
+  background: white;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.funcboton{
+  border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
