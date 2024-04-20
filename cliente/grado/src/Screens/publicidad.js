@@ -11,9 +11,9 @@ const Publicidad =() =>{
         <section className="contenedor  textocentro">
             <div className="public">
             
-            <p>Nombre: beducbecuewb</p>
+            <p>Nombre:</p>
             <p>Logo:</p>
-            <p>Descripción: lomenciencie</p>
+            <p>Descripción:</p>
             <p>Servicios:</p>
             <hr></hr>
             <p>Lugar:</p>
@@ -26,6 +26,18 @@ const Publicidad =() =>{
             <p>Logo:</p>
             <p>Descripción:</p>
             <p>Servicios:</p>
+            <hr></hr>
+            <p>Lugar:</p>
+            <p>Contacto:</p>
+            </div>
+
+            <div className="public">
+            
+            <p>Nombre:</p>
+            <p>Logo:</p>
+            <p>Descripción:</p>
+            <p>Servicios:</p>
+            <hr></hr>
             <p>Lugar:</p>
             <p>Contacto:</p>
             </div>

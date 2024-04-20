@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import '../Todo.css'
+import './navBar.css'
 
 const links = [
     {
@@ -30,19 +30,28 @@ const links = [
 ];
 
 const NavBar =() =>{
+    const [isOpen, setIsOpen]= useState(false)
     return (
         
-        <div className="Cabecera nav-desaparece">
+        <div className="navbar">
+        <div className="nav_logo">BOVISOFT J&J S.A.S</div>
+        <div className={`nav_items ${isOpen && "open"}`}>
+            { links.map((X,i) =>(
+            <Link key={i} to={X.href}>
+            {X.name}
+            </Link>
+            ))
+            }
+        </div>
+        <div className={`nav_toggle ${isOpen && "open"}`} onClick={ ()=>setIsOpen(!isOpen)}>
+            <span> </span>
+            <span> </span>
+            <span> </span>
+            
+            </div>
+        </div>
 
-        { links.map((X,i) =>(
-        <Link key={i} to={X.href}>
-        {X.name}
-        </Link>
-    ))
-}
-</div>
-       
-        
+  
     );
    
 };

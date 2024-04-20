@@ -20,3 +20,89 @@
     box-shadow: 5px 5px gray;
 }
 
+.articuloquienes{
+  background: rgb(228, 228, 228);
+  border: 2px solid #333;
+  margin: 15px 27%;
+  padding: 5px 5px;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.quienesmis{
+  background: rgb(228, 228, 228);
+  color: #333;
+  border: 2px solid #333;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px gray;
+}
+
+.sectionquienesmis{
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+}
+
+.titulos{
+  font: bolder;
+  text-align: center;
+  text-decoration: solid;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.form{
+
+  background-color: aliceblue;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 1em;
+  padding: 3.5em 1.5em;
+  margin: auto;
+}
+
+.formcont{
+width: 100%;
+display: grid;
+gap: 1em;
+grid-auto-columns: 100%;
+}
+.formtitulo {
+  text-align: center;
+  
+}
+.funcioninput{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1rem;
+  padding: .8em 1em;
+  border: none;
+  border: 1px solid aliceblue;
+  border-radius: 0.2px;
+
+}
+
+.funcioninput--message{
+  resize: none;
+  padding: 1.8em 1em;
+  margin-bottom: .5em;
+
+}
+
+.formboton{
+  font-size: 1rem;
+  background-color: green;
+  color: aliceblue;
+  border: none;
+  width: 300;
+  padding: -7em 0;
+  border-radius: .2em;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+@media (max-width:500px) {
+  .form{
+    padding: 3.5em 1em;
+  }
+}
