@@ -14,7 +14,7 @@ export default function PopupSignup() {
   return (
     <div id="popsignup" className="popup hide" onClick={hide}>
       <div className="wrapper">
-        <form>
+        <form className='formpopup'>
           <h2>Registrarse</h2>
           <div className="form-element">
             <label htmlFor="nombre">Nombre</label>
@@ -41,12 +41,12 @@ export default function PopupSignup() {
             <input type="text" id="numeroid" name="numeroid" placeholder="Ingresar número ID" />
           </div>
           <div className="form-element">
-            <label htmlFor="correo">Email</label>
-            <input type="text" id="correo" name="correo" placeholder="Ingresar Email" />
+            <label htmlFor="Correo">Email</label>
+            <input type="text" id="Correo" name="Correo" placeholder="Ingresar Email" />
           </div>
           <div className="form-element">
-            <label htmlFor="contraseña">Contraseña</label>
-            <input type="password" id="contraseña" name="contraseña" placeholder="Ingresar contraseña" />
+            <label htmlFor="Contraseña">Contraseña</label>
+            <input type="password" id="Contraseña" name="Contraseña" placeholder="Ingresar contraseña" />
           </div>
           <button type="submit" onClick={submit}>Aceptar</button>
         </form>

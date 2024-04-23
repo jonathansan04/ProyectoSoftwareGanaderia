@@ -4,7 +4,7 @@ const Home = ({ sesionid }) => {
     let navigate = useNavigate();
     const logout = () => {
         localStorage.removeItem('Sessionid');
-        navigate('/inicio');
+        navigate('/app/inicio');
     }
     return (
         <div style={{background: "#fff8"}}>

@@ -9,6 +9,9 @@ let constraint = async (method, field, body) => {
             body.contraseña && size == 0 && (body.contraseña = await bcrypt.hash(body.contraseña, 10));
             return { msg: size > 0 ? "El correo ya esta registrado" : null, obj: body };
         }
+        else{
+            return { msg: null, obj: body };
+        }
     }
 }
 

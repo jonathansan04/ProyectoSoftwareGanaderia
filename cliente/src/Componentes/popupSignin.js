@@ -16,7 +16,7 @@ export default function PopupSignup() {
         localStorage.setItem('Sessionid', response.id);
         setShowerror(null);
         document.getElementById("popsignin").classList.add('hide');
-        navigate('/');
+        navigate('/app/');
       }
       else setShowerror(response.message);
       $form.reset();
@@ -26,7 +26,7 @@ export default function PopupSignup() {
   return (
     <div id="popsignin" className="popup hide" onClick={hide}>
       <div className="wrapper">
-        <form>
+        <form className='formpopup'>
           <h2>Iniciar sesion</h2>
           <div className="form-element">
             <label htmlFor="correo">Email</label>

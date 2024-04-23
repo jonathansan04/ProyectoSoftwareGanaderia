@@ -35,7 +35,7 @@ const NavBar =() =>{
         <div className="Cabecera nav-desaparece">
 
         { links.map((X,i) =>(
-        <Link key={i} to={X.href}>
+        <Link key={i} to={"/app"+X.href}>
         {X.name}
         </Link>
     ))
