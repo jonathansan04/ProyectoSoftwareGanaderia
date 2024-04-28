@@ -3,11 +3,11 @@ const typeCollections = {
     { field: 'numero', type: 'number', required: true },
     { field: 'nacimiento', type: 'date', required: true },
     { field: 'sexo', type: 'text', length: 1, required: true },
-    { field: 'id_madre', type: 'text', length: 20, required: false },
-    { field: 'id_padre', type: 'text', length: 20, required: false },
+    { field: 'id_animal_madre', type: 'text', length: 20, required: false },
+    { field: 'id_animal_padre', type: 'text', length: 20, required: false },
     { field: 'peso', type: 'number', required: false },
-    { field: 'id_usuario', type: 'text', length: 20, required: true },
-    { field: 'id_raza', type: 'text', length: 20, required: true }],
+    { field: 'id_raza', type: 'text', length: 20, required: true },
+    { field: 'id_usuario', type: 'text', length: 20, required: true }],
 
     Construccion: [{ field: 'cantidad', type: 'number', required: true },
     { field: 'extension', type: 'number', required: true },
@@ -60,7 +60,7 @@ const typeCollections = {
     { field: 'id_finca', type: 'text', length: 20, required: true }],
 
     Raza: [{ field: 'nombre', type: 'text', length: 50, required: true },
-    { field: 'id_tipo_raza', type: 'text', length: 20, required: true }],
+    { field: 'id_tipoRaza', type: 'text', length: 20, required: true }],
 
     Rol: [{ field: 'nombre', type: 'text', length: 50, required: true }],
 
