@@ -5,7 +5,7 @@ import './navBar.css'
 const links = [
     {
         name:"Inicio",
-        href: "/home",
+        href: "/inicio",
     },
     {
         name:"¿Como funciona?",
@@ -34,10 +34,10 @@ const NavBar =() =>{
     return (
         
         <div className="navbar">
-        <div className="nav_logo">BOVISOFT J&J S.A.S</div>
+        <Link className="link" to={"/app/"}><div className="nav_logo">BOVISOFT J&J S.A.S</div></Link>
         <div className={`nav_items ${isOpen && "open"}`}>
             { links.map((X,i) =>(
-            <Link key={i} to={X.href}>
+            <Link key={i} to={"/app"+X.href}>
             {X.name}
             </Link>
             ))

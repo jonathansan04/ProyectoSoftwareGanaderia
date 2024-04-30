@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Contact from "./Screens/contacto";
-import Inicio from "./Screens/inicio";
 import Funcion from "./Screens/funcion";
 import Quienes from "./Screens/quienes";
+import Inicio from "./Screens/inicio";
 import Publicidad from "./Screens/publicidad";
 import PopupSignup from "./Componentes/popupSignup";
 import PopupSignin from "./Componentes/popupSignin";
