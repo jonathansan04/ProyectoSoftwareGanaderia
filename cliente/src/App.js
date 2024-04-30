@@ -1,5 +1,5 @@
-import React, {useState}from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 import Contact from "./Screens/contacto";
 import Inicio from "./Screens/inicio";
 import Funcion from "./Screens/funcion";
@@ -9,17 +9,15 @@ import PopupSignup from "./Componentes/popupSignup";
 import PopupSignin from "./Componentes/popupSignin";
 import NavBar from "./Componentes/navBar";
 import './Todo.css';
+import Home from "./Screens/home";
+import Auth from "./Suports/auth";
 
 
 function App() {
-
-
-      
   let show = (id) => document.getElementById(id).classList.remove('hide');
 
   return (
     <div className="App">
-
       <div >
         <div className="row">
           <div className="titulo">
@@ -37,31 +35,20 @@ function App() {
         <button id="btnsignin" onClick={() => show("popsignin")}>Sign in</button>
       </div >
 
-      <h3 className="slogan">LLeva la mejor solución para el manejo de tú ganaderia</h3>
+      <h3 className="slogan">Lleva la mejor solución para el manejo de tú ganaderia</h3>
       <div >
-        <Router >
           <nav className="navv">
-
-          <NavBar />
-
+            <button className="nav-boton" >Menú</button>
+            <NavBar />
           </nav>
-
-          
-
           <Routes>
-            
-            <Route path="/home" element={<Inicio />} />
-
-            <Route path="funcion" element={< Funcion />} />
-
+            <Route path="/inicio" element={<Inicio />} />
+            <Route path="/funcion" element={<Funcion />} />
             <Route path="/quienes" element={<Quienes />} />
-
-            <Route path="/publicidad" element={< Publicidad />} />
-
-            <Route path="/contact" element={< Contact />} />
-
+            <Route path="/publicidad" element={<Publicidad />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/" element={<Auth><Home /></Auth>} />
           </Routes>
-        </Router>
       </div>
 
       <footer className="piepagina">
@@ -90,13 +77,8 @@ function App() {
 
         </div>
       </footer>
-   
+
     </div>
-
-
-
-
-
   );
 }
 
