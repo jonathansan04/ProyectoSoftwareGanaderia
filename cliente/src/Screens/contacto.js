@@ -4,14 +4,18 @@ import './estilosscreens.css'
 const Contacto =() =>{
     return (
         <div>
-           
-         <h3>
-            Buenaaass
+         
+        <section className="sectioncontacto textocentro  ">
+        <div className="cuadrocontacto">
+            <h6 className="titulos">
+            CONTACTENOS...
+            </h6>
+            <p>
+            Si desea obtener más información de como aparecer en nuestro directorio de servicios o si desea adquirir las funcionalidades de nuestro software ganadero y tiene alguna duda, llena el siguiente formulario y nos estaremos comunicando.             </p>
+        </div>
+        </section>
 
-            Información de contacto..
-
-            Ingrese la información del formulario y prontamente nos estaremos comunicando con usted para enverle toda la información
-        </h3>
+       
 
         <form className="form">
         <div className="formcont">

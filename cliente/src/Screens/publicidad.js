@@ -5,9 +5,17 @@ const Publicidad =() =>{
     return (
         <div>
            
-            <h3>
-                Hola, acontinuación podra encontrar increibles y espectaculares productos y servicios para el bienestar de su ganaderia
-            </h3>
+           <section className="sectionpublicidad textocentro  ">
+        <div className="cuadropublicidad">
+            <h2 className="titulos">
+                Directorio de servicios
+            </h2>
+            <h5 className="titulos">
+            A continuación, encontrara increíbles y espectaculares productos y servicios para el bienestar de su ganadería, por lo que encontrara desde diferentes veterinarios, zootecnistas, productores y otros servicios que le darán una mano a su ganadería.
+            </h5>
+        </div>
+        </section>
+            
         <section className="contenedor  textocentro">
             <div className="public">
             

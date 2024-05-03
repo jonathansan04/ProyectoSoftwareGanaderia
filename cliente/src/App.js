@@ -11,7 +11,7 @@ import NavBar from "./Componentes/navBar";
 import './Todo.css';
 import Home from "./Screens/home";
 import Auth from "./Suports/auth";
-
+import logo from "./Screens/Imagesscreen/logoprueba.jpg";
 
 function App() {
   let show = (id) => document.getElementById(id).classList.remove('hide');
@@ -36,6 +36,7 @@ function App() {
       </div >
 
       <h3 className="slogan">Lleva la mejor solución para el manejo de tú ganaderia</h3>
+      
       <div >
           <nav className="navv">
             <button className="nav-boton" >Menú</button>
@@ -50,21 +51,25 @@ function App() {
             <Route path="/" element={<Auth><Home /></Auth>} />
           </Routes>
       </div>
+      
 
       <footer className="piepagina">
         <div className="divpie">
           <div className="box">
-            <h3>GANASOFT J&J S.A.S</h3>
+            <figure>
+            <img src={logo}  alt="Logo"/>
+            </figure>
           </div>
           <div className="box">
             <h2>SOBRE NOSOTROS</h2>
             <p>Jonathan Santos Cel. 3052518319</p>
-            <p>Johan Cortez Cel. </p>
+            <p>jasantoss@udistrital.edu.co</p>
+            <p>Johan Cortez Cel. 3013560782     </p>
+            <p>jdcortezg@udistrital.edu.co</p>
           </div>
           <div className="box">
           <h2>SIGUENOS</h2>
           <div className="redes">
-            <a href="#" className="fa fa-instagram"></a>
 
 
           </div>
@@ -72,7 +77,7 @@ function App() {
 
         </div>
         <div className="divpagina">
-          <small>&copy; 2024 <b>GANASOFT J&J S.A.S</b> - Todos los Derechos Reservados</small>
+          <small>&copy; 2024 <b>BOVISOFT J&J S.A.S</b> - Todos los Derechos Reservados</small>
 
 
         </div>

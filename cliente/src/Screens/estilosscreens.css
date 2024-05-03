@@ -101,6 +101,178 @@ grid-auto-columns: 100%;
   font-weight: 400;
 }
 
+
+/* Estilo básico para la galería */
+figure {
+  margin:0;
+}
+#gallery {
+    max-width: 60%;
+    height: 50%;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    left: 20px;
+    top: 200px;
+}
+
+.gallery-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+}
+
+/* Navegación de la galería */
+.gallery-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.nav-button {
+    background-color: rgba(0,0,0, .3);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.nav-button > span {
+  font-size: 30px;
+}
+.nav-button:hover {
+    background-color: #005f5f;
+}
+
+
+.cuadroinicio{
+  background: rgb(228, 228, 228);
+  color: #333;
+  border: 2px solid #333;
+  margin: 10px;
+  padding: 10px;
+  width: 50%;
+  border-radius: 5px;
+  box-shadow: 5px 5px gray;
+  left: 600%;
+ 
+}
+
+.sectioncuadro{
+  margin: 0 auto;
+  width: 50%;
+  left: 40%;
+  position: relative;
+}
+
+.cuadropublicidad{
+  background: rgb(228, 228, 228);
+  color: #333;
+  border: 2px solid #333;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 5px gray;
+ 
+}
+
+.sectionpublicidad{
+  margin: 0 auto;
+  width: 50%;
+  
+  position: relative;
+}
+
+.cuadrocontacto{
+  background: rgb(228, 228, 228);
+  color: #333;
+  border: 2px solid #333;
+  margin: 10px;
+  padding: 10px;
+  width: 80%;
+  border-radius: 5px;
+  box-shadow: 5px 5px gray;
+
+ 
+}
+
+.sectioncontacto{
+  margin: 0 auto;
+  width: 50%;
+  left: 35px;
+  position: relative;
+}
+
+
+.cuadrofuncion{
+  background: rgb(228, 228, 228);
+  color: #333;
+  border: 2px solid #333;
+  margin: 10px;
+  padding: 10px;
+  width: 80%;
+  border-radius: 5px;
+  box-shadow: 5px 5px gray;
+
+ 
+}
+
+.sectionfuncion{
+  margin: 0 auto;
+  width: 50%;
+
+  position: relative;
+}
+
+.sectionprecios{
+  margin: 0 auto;
+  width: 80%;
+  left: 560px;
+  top: 32px;
+  position: relative;
+}
+
+.sectionquehacer{
+  margin: 0 auto;
+  width: 80%;
+  left: -80px;
+  top: -250px;
+  position: relative;
+}
+
+.cuadrofunciona{
+  background: rgb(228, 228, 228);
+  color: #333;
+  border: 2px solid #333;
+  margin: 10px;
+  padding: 10px;
+  width: 80%;
+  border-radius: 5px;
+  box-shadow: 5px 5px gray;
+
+ 
+}
+
+.sectionfunciona{
+  margin: 0 auto;
+  width: 50%;
+  top: -100px;
+  position: relative;
+}
+
 @media (max-width:500px) {
   .form{
     padding: 3.5em 1em;
