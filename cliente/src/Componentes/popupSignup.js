@@ -8,6 +8,7 @@ export default function PopupSignup() {
       let $form = e.target.parentElement,
         data = Object.fromEntries(new FormData($form)),
         response = await post('/Usuario', data);
+        console.log(data);
       console.log(response);
     }
 
@@ -29,24 +30,23 @@ export default function PopupSignup() {
             <input type="text" id="celular" name="celular" placeholder="Ingresar numero de celular" />
           </div>
           <div className="form-element">
-            <label htmlFor="tipoid">Tipo de ID</label>
-            <select id="tipoid" name="tipoid">
-              <option > </option>
-              <option value="Cedula de ciudadania">Cedula de ciudadania</option>
-              <option value="Cedula de extranjeria">Cedula de extranjeria</option>
+            <label htmlFor="tipo_id">Tipo de ID</label>
+            <select defaultValue={""} id="tipo_id" name="tipo_id">
+              <option value="CC">Cedula de ciudadania</option>
+              <option value="CE">Cedula de extranjeria</option>
             </select>
           </div>
           <div className="form-element">
-            <label htmlFor="numeroid">Número ID</label>
-            <input type="text" id="numeroid" name="numeroid" placeholder="Ingresar número ID" />
+            <label htmlFor="numero_id">Número ID</label>
+            <input type="text" id="numero_id" name="numero_id" placeholder="Ingresar número ID" />
           </div>
           <div className="form-element">
-            <label htmlFor="Correo">Email</label>
-            <input type="text" id="Correo" name="Correo" placeholder="Ingresar Email" />
+            <label htmlFor="correo">Email</label>
+            <input type="text" id="correo" name="correo" placeholder="Ingresar Email" />
           </div>
           <div className="form-element">
-            <label htmlFor="Contraseña">Contraseña</label>
-            <input type="password" id="Contraseña" name="Contraseña" placeholder="Ingresar contraseña" />
+            <label htmlFor="contraseña">Contraseña</label>
+            <input type="password" id="contraseña" name="contraseña" placeholder="Ingresar contraseña" />
           </div>
           <button type="submit" onClick={submit}>Aceptar</button>
         </form>
