@@ -64,8 +64,8 @@ function App() {
             <h2>SOBRE NOSOTROS</h2>
             <p>Jonathan Santos Cel. 3052518319</p>
             <p>jasantoss@udistrital.edu.co</p>
-            <p>Johan Cortez Cel. 3013560782     </p>
-            <p>jdcortezg@udistrital.edu.co</p>
+            <p>Johan Cortes Cel. 3013560782     </p>
+            <p>jdcortesg@udistrital.edu.co</p>
           </div>
           <div className="box">
           <h2>SIGUENOS</h2>

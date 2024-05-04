@@ -19,15 +19,15 @@ export default function PopupSignup() {
           <h2>Registrarse</h2>
           <div className="form-element">
             <label htmlFor="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Ingresar Nombre" />
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresar Nombre" maxLength={50} />
           </div>
           <div className="form-element">
             <label htmlFor="apellido">Apellido</label>
-            <input type="text" id="apellido" name="apellido" placeholder="Ingresar Apellido" />
+            <input type="text" id="apellido" name="apellido" placeholder="Ingresar Apellido" maxLength={50}/>
           </div>
           <div className="form-element">
             <label htmlFor="celular">Celular</label>
-            <input type="text" id="celular" name="celular" placeholder="Ingresar numero de celular" />
+            <input type="text" id="celular" name="celular" placeholder="Ingresar numero de celular" maxLength={15} />
           </div>
           <div className="form-element">
             <label htmlFor="tipo_id">Tipo de ID</label>
@@ -38,15 +38,15 @@ export default function PopupSignup() {
           </div>
           <div className="form-element">
             <label htmlFor="numero_id">Número ID</label>
-            <input type="text" id="numero_id" name="numero_id" placeholder="Ingresar número ID" />
+            <input type="text" id="numero_id" name="numero_id" placeholder="Ingresar número ID" maxLength={20} />
           </div>
           <div className="form-element">
             <label htmlFor="correo">Email</label>
-            <input type="text" id="correo" name="correo" placeholder="Ingresar Email" />
+            <input type="text" id="correo" name="correo" placeholder="Ingresar Email" maxLength={50} />
           </div>
           <div className="form-element">
             <label htmlFor="contraseña">Contraseña</label>
-            <input type="password" id="contraseña" name="contraseña" placeholder="Ingresar contraseña" />
+            <input type="password" id="contraseña" name="contraseña" placeholder="Ingresar contraseña" minLength={4} maxLength={50} />
           </div>
           <button type="submit" onClick={submit}>Aceptar</button>
         </form>
