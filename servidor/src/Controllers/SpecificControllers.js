@@ -23,7 +23,10 @@ let login = (req, res) => {
             return;
         }
         res.json({ message: "OK", success: true, fields: typeCollections[col] });
+    },
+    collections = (req, res) => {
+        res.json({ message: "OK", success: true, collections: Object.keys(typeCollections) });
     };
 
 
-export { login, fields }
+export { login, fields, collections }

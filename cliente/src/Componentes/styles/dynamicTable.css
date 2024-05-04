@@ -3,7 +3,7 @@
     max-width: 90%;
     border-collapse: collapse;
     border: 2px solid #8f8f8f;
-    margin: 0 auto;
+    margin: 2rem auto;
 }
 
 .table-head th {
@@ -11,6 +11,10 @@
     border: 1px solid #a0a0a0;
     padding: 8px;
     text-align: center;
+}
+
+.table-row {
+    background-color: white;
 }
 
 .table-row:hover {
@@ -27,7 +31,7 @@
 }
 
 .btn-sort {
-    background-image: url(./img/icon-sort.jpg);
+    background-image: url(../../img/tables/icon-sort.jpg);
     transform: rotate(180deg);
     background-color: transparent;
     border: none;

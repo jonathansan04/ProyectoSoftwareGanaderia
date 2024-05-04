@@ -1,12 +1,10 @@
 import React from "react";
 import './estilosscreens.css'
-import imagen1 from "./Imagesscreen/imagenslider2a.jpg"
-import imagen2 from "./Imagesscreen/imagenslider3a.jpg"
-import imagen3 from "./Imagesscreen/imagenprueba3.jpg"
+import imagen1 from "../img/screen/imagenslider2a.jpg";
+import imagen2 from "../img/screen/imagenslider3a.jpg"
+import imagen3 from "../img/screen/imagenprueba3.jpg"
 
 const Inicio =() =>{
-   
-
    
     return (
         <div>

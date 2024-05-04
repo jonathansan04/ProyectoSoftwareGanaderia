@@ -273,8 +273,20 @@ figure {
   position: relative;
 }
 
+.cont-tarjeta{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 5rem;
+  margin: 1em;
+  padding: 1em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 95%;
+}
 
 
+/* 
 .tarjetas{
   background: rgb(47, 167, 41);
   color: #333;
@@ -381,7 +393,7 @@ figure {
   width: 25%;
   height: 250px;
   
-}
+} */
 
 @media (max-width:500px) {
   .form{

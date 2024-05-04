@@ -11,7 +11,9 @@ import NavBar from "./Componentes/navBar";
 import './Todo.css';
 import Home from "./Screens/home";
 import Auth from "./Suports/auth";
-import logo from "./Screens/Imagesscreen/logoprueba.jpg";
+import logo from "../src/img/screen/logoprueba.jpg";
+import DynamicForm from "./Componentes/dynamicForm";
+import DynamicTable from "./Componentes/dynamicTable";
 
 function App() {
   let show = (id) => document.getElementById(id).classList.remove('hide');
@@ -36,28 +38,30 @@ function App() {
       </div >
 
       <h3 className="slogan">Lleva la mejor solución para el manejo de tú ganaderia</h3>
-      
+
       <div >
-          <nav className="navv">
-            <button className="nav-boton" >Menú</button>
-            <NavBar />
-          </nav>
-          <Routes>
-            <Route path="/inicio" element={<Inicio />} />
-            <Route path="/funcion" element={<Funcion />} />
-            <Route path="/quienes" element={<Quienes />} />
-            <Route path="/publicidad" element={<Publicidad />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/" element={<Auth><Home /></Auth>} />
-          </Routes>
+        <nav className="navv">
+          <button className="nav-boton" >Menú</button>
+          <NavBar />
+        </nav>
+        <Routes>
+          <Route path="/inicio" element={<Inicio />} />
+          <Route path="/funcion" element={<Funcion />} />
+          <Route path="/quienes" element={<Quienes />} />
+          <Route path="/publicidad" element={<Publicidad />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<Auth><Home /></Auth>} />
+          <Route path="/form/:collection" element={<Auth><DynamicForm /></Auth>} />
+          <Route path="/table/:collection" element={<Auth><DynamicTable /></Auth>} />
+        </Routes>
       </div>
-      
+
 
       <footer className="piepagina">
         <div className="divpie">
           <div className="box">
             <figure>
-            <img src={logo}  alt="Logo"/>
+              <img src={logo} alt="Logo" />
             </figure>
           </div>
           <div className="box">
@@ -68,11 +72,11 @@ function App() {
             <p>jdcortesg@udistrital.edu.co</p>
           </div>
           <div className="box">
-          <h2>SIGUENOS</h2>
-          <div className="redes">
+            <h2>SIGUENOS</h2>
+            <div className="redes">
 
 
-          </div>
+            </div>
           </div>
 
         </div>

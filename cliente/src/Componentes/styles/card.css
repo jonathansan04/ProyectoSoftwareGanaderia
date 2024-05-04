@@ -1,0 +1,58 @@
+.secciontarjeta {
+    margin: 0 auto;
+    width: 100%;
+    background-color: #f0fff0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #3a4d1fb7;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.secciontarjeta:hover {
+    background-color: #6ea31e;
+}
+
+.titulotarjeta {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.iconotarjeta {
+    width: 40%;
+    align-self: center;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1.5rem;
+}
+
+.botontarjeta {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 15px;
+    width: 35%;
+    top: 15px;
+    border: 3px solid #e1ab16;
+    align-items: center;
+}
+
+.botontarjeta2 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 15px;
+    top: 15px;
+    border: 3px solid #6e5a09;
+    width: 35%;
+}
+
+.line{
+    height: 5px;
+    width: 100%;
+    background-color: #378a9b;
+    box-sizing: border-box;
+}

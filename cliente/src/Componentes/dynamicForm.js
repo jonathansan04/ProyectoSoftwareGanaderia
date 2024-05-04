@@ -39,7 +39,6 @@ export default function DynamicForm() {
 
     return (
         <div className="cont">
-            <h1>{collection}</h1>
             <form onSubmit={submit}>
                 {fields === null && <p>Cargando...</p>}
                 {fields &&

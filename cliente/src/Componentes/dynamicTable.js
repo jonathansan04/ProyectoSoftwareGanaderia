@@ -35,7 +35,6 @@ export default function DynamicTable() {
 
     return (
         <div>
-            <h1>{collection}</h1>
             <table className="table">
                 <thead className="table-head">
                     <tr className="table-row">

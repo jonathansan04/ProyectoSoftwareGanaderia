@@ -3,7 +3,9 @@
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
+    background-color: #fafafa;
+    margin: 2rem auto;
 }
 
 .group {
