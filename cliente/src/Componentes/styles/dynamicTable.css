@@ -1,0 +1,38 @@
+.table {
+    width: fit-content;
+    max-width: 90%;
+    border-collapse: collapse;
+    border: 2px solid #8f8f8f;
+    margin: 0 auto;
+}
+
+.table-head th {
+    background-color: #f2f2f2;
+    border: 1px solid #a0a0a0;
+    padding: 8px;
+    text-align: center;
+}
+
+.table-row:hover {
+    background-color: #f5fff5;
+}
+
+.table-cell {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.shadowed {
+    background-color: #f0f0ff;
+}
+
+.btn-sort {
+    background-image: url(./img/icon-sort.jpg);
+    transform: rotate(180deg);
+    background-color: transparent;
+    border: none;
+    background-size: 100%;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+}
