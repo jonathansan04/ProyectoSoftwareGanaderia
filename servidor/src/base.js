@@ -84,19 +84,19 @@ const typeCollections = {
   { field: 'id_empleado', type: 'text', length: 20, required: true }]
 },
   validate = (col, obj) => typeCollections[col].every(({ field, type, length, required }) => {
-    if ((required && !obj[field]) || (length && obj[field].length > length)) {
+    if ((required && !obj[field]) || (length && obj[field] && obj[field].length > length)) {
       console.log(`Error en ${field} de ${col}`);
       return false;
     }
     return true;
   }),
-  invalidate = (col, obj) => Object.keys(obj).some(key => // Check if any key is not present in the base collection
+  invalidate = (col, obj) => Object.keys(obj).some(key => 
   {
     if (!typeCollections[col].map(({ field }) => field).includes(key)) {
       console.log(`Error en ${key} de ${col}`)
-      return false;
+      return true;
     }
-    return true;
+    return false;
   }),
   collections = {};
 for (const key in typeCollections) {
