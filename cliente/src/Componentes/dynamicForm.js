@@ -48,10 +48,11 @@ export default function DynamicForm() {
                                 const currentIndex = index * 3 + i;
                                 if (fields[currentIndex]) {
                                     return (
-                                        fields[currentIndex].field === 'id_usuario' ?
+                                        fields[currentIndex].field === 'id_usuario' && collection !== 'Empleado' ?
                                             <input
                                                 key={currentIndex}
                                                 type='hidden'
+                                                name={fields[currentIndex].field}
                                                 value={localStorage.getItem('Sessionid')}>
                                             </input>
                                             : fields[currentIndex].field.includes('id_') ?
