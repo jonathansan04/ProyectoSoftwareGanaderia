@@ -19,7 +19,7 @@ const Home = ({ sesionid }) => {
     return (
         <div style={{ background: "#fff5" }}>
             <h1>
-                Bienvenidooo
+                Bienvenido a los modulos de las funcionalidades para su ganadería
             </h1>
 
             <div className='cont-tarjeta'>

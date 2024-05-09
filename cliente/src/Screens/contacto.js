@@ -1,7 +1,25 @@
-import React from "react";
-import './estilosscreens.css'
+import React, {useRef} from "react";
+import './estilosscreens.css';
+import emailjs from '@emailjs/browser';
 
 const Contacto =() =>{
+
+    const refForm = useRef();
+
+    const handleSubmit = (event) =>{
+        event.preventDefault();
+      
+        const serviceID= "service_5mjq5vl";
+        const templateID= "template_g7ytd2c";
+        const apikey= "nUrK1tnAE_Fd-C5-G";
+
+        emailjs.sendForm(serviceID, templateID, refForm.current, apikey)
+        .then(result =>console.log(result.text))
+        .catch(error => console.error(error))
+
+        alert("Mensaje Enviado");
+    }
+    
     return (
         <div>
          
@@ -17,14 +35,14 @@ const Contacto =() =>{
 
        
 
-        <form className="form">
+        <form className="form" ref={refForm} action="" onSubmit={handleSubmit}>
         <div className="formcont">
             <h3 className="formtitulo">Contactenos</h3>     
-            <input type="text" className="funcioninput" placeholder="Nombre"></input>
-            <input type="email" className="funcioninput" placeholder="Email"></input>
-            <input  className="funcioninput" placeholder="Celular"></input>
+            <input type="text" className="funcioninput" placeholder="Nombre" name="username" id="username" required></input>
+            <input type="email" className="funcioninput" placeholder="Email" name="email" id="email" required></input>
+            <input name="celular" id="celular" className="funcioninput" placeholder="Celular" required></input>
 
-            <textarea className="funcioninput funcioninput--message" placeholder="Mensaje"></textarea>
+            <textarea maxLength={400} className="funcioninput funcioninput--message" placeholder="Mensaje" name="message" id="message" required></textarea>
             
             <input type="submit" value="Enviar" className="formboton"></input>
 
