@@ -116,10 +116,6 @@ const Home = ({ sesionid }) => {
                 </div>
             </section> */}
 
-
-            <h3>
-                Información de Inicio
-            </h3>
             <button onClick={logout}>Cerrar Sesión</button>
         </div>
     )

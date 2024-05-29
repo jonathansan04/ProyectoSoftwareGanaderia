@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './estilosscreens.css'
 import imagen1 from "../img/screen/imagenslider2a.jpg";
 import imagen2 from "../img/screen/imagenslider3a.jpg"
@@ -6,13 +6,48 @@ import imagen3 from "../img/screen/imagenprueba3.jpg"
 
 const Inicio =() =>{
    
+        const [currentIndex, setCurrentIndex] = useState(0);
+        const totalImages = document.querySelectorAll('.gallery-item').length;
+    
+        const navigate = (direction) => {
+            setCurrentIndex((prevIndex) => (prevIndex + direction + totalImages) % totalImages);
+        };
+    
+        useEffect(() => {
+            const galleryContainer = document.querySelector('.gallery-container');
+            const offset = -currentIndex * 100;
+            galleryContainer.style.transform = `translateX(${offset}%)`;
+        }, [currentIndex]);
+    
+        let autoplayInterval = null;
+    
+        const startAutoplay = (interval) => {
+            stopAutoplay();
+            autoplayInterval = setInterval(() => {
+                navigate(1);
+            }, interval);
+        };
+    
+        const stopAutoplay = () => {
+            clearInterval(autoplayInterval);
+        };
+    
+        useEffect(() => {
+            startAutoplay(3000);
+            return () => stopAutoplay();
+        }, []);
+    
+        const handleButtonClick = () => {
+            stopAutoplay();
+        };
+    
     return (
         <div>
         
         <div>
         <div>
         <section className="sectioncuadro textocentro  ">
-        <div className="cuadroinicio">
+        <div className="cuadroinicios">
             <h6 className="titulos">
             ¿Tiene problemas para manejar la información de su ganadería?
             </h6>
@@ -41,8 +76,9 @@ const Inicio =() =>{
         </figure>
     </div>
     <nav class="gallery-navigation">
-        <button class="nav-button prev-button"><span>&#60;</span></button>
-        <button class="nav-button next-button"><span>&#62;</span></button>
+        <button className="nav-button prev-button" onClick={() => navigate(-1)}><span>&#60;</span></button>
+        <button className="nav-button prev-button" onClick={() => navigate(1)}><span>&#62;</span></button>
+     
     </nav>
     </section>
     </div>

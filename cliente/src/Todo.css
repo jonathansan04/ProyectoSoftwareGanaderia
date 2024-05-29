@@ -9,6 +9,7 @@
     padding: 10px 5px;
     display: flex;
     justify-content: space-around;
+    
 }
 
 .Cabecera-botom{
@@ -96,19 +97,18 @@
     margin: 0 5px;
 }
 
-.nav-boton{
-    background: salmon;
-    color: #f5f5f5;
-    padding: 10px 0;
-    border: 2px solid beige;
-    display: none;
-}
+
 
 .titulo{
     font-weight: 900;
     font-style: italic;
     font-size: larger;
     color: #333;
+}
+
+.titulol{
+    text-shadow: 0 0 5px green, 0 0 4px #0000ff;
+
 }
 
 .slogan{
@@ -199,6 +199,7 @@
     .navv{
         background: #3a7bd5;
         flex-direction: column;
+        z-index: 2;
         
     }
     .Cabecera{
@@ -206,13 +207,16 @@
         flex-direction: column;
         margin: 10px 0;
         text-decoration: none;
+        z-index: 2;
         
     }
     .nav-boton{
         display: inline-block;
+        z-index: 2;
     }
     .nav-desaparece{
         display: none;
+        z-index: 2;
     }
 
     .piepagina .divpie{
