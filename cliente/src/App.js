@@ -14,17 +14,18 @@ import Auth from "./Suports/auth";
 import logo from "../src/img/screen/logoprueba.jpg";
 import DynamicForm from "./Componentes/dynamicForm";
 import DynamicTable from "./Componentes/dynamicTable";
+import { FaFacebookSquare,FaInstagramSquare, FaTwitterSquare } from 'react-icons/fa';
 
 function App() {
   let show = (id) => document.getElementById(id).classList.remove('hide');
-
+  let link ='';
   return (
     <div className="App">
       <div >
         <div className="row">
           <div className="titulo">
 
-            <h1>Software ganadero</h1>
+            <h1 className="titulol">Software ganadero</h1>
 
           </div>
           <PopupSignup />
@@ -41,7 +42,7 @@ function App() {
 
       <div >
         <nav className="navv">
-          <button className="nav-boton" >Menú</button>
+          
           <NavBar />
         </nav>
         <Routes>
@@ -74,7 +75,9 @@ function App() {
           <div className="box">
             <h2>SIGUENOS</h2>
             <div className="redes">
-
+              <a href={link} className="social"><FaFacebookSquare /></a>
+              <a href={link} className="social"><FaInstagramSquare /></a>
+              <a href={link} className="social"><FaTwitterSquare /></a>
 
             </div>
           </div>

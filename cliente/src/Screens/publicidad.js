@@ -10,7 +10,7 @@ const Publicidad =() =>{
             <h2 className="titulos">
                 Directorio de servicios
             </h2>
-            <h5 className="titulos">
+            <h5 className="textocentro tamaletra">
             A continuación, encontrara increíbles y espectaculares productos y servicios para el bienestar de su ganadería, por lo que encontrara desde diferentes veterinarios, zootecnistas, productores y otros servicios que le darán una mano a su ganadería.
             </h5>
         </div>

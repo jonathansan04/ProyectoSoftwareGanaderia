@@ -23,7 +23,7 @@ const Funcion =() =>{
            
         <section className="sectionfuncion textocentro  ">
         <div className="cuadrofuncion">
-        <h3>
+        <h3 className="titulos">
            ¿Comó funciona?
         </h3>
 
@@ -35,7 +35,7 @@ const Funcion =() =>{
 
         <section className="sectionprecios textocentro  ">
         <div className="cuadroinicio">
-        <h3>
+        <h3 className="titulos">
            Precios
         </h3>
 
@@ -54,7 +54,7 @@ const Funcion =() =>{
         
         <section className="sectionquehacer textocentro  ">
         <div className="cuadroinicio">
-        <h3>
+        <h3 className="titulos">
            ¿Qué debo hacer después de adquirir el plan?
         </h3>
 
@@ -63,14 +63,14 @@ const Funcion =() =>{
            </div>
 
            <div className="cuadroinicio">
-            <h3>¿Qué debo hacer al ingresar al aplicativo?
+            <h3 className="titulos">¿Qué debo hacer al ingresar al aplicativo?
             </h3>
             <p>Para efectuar un óptimo funcionamiento, la primera vez que ingrese, primero debe crear una finca, con los datos que el formulario requiere.</p>
 
            </div>
 
            <div className="cuadroinicio">
-            <h3>
+            <h3 className="titulos">
                 ¿Que funcionalidades puedo encontrar?
             </h3>
 
@@ -94,7 +94,7 @@ const Funcion =() =>{
 
         <form className="form" ref={refForm} action="" onSubmit={handleSubmit}>
         <div className="formcont">
-            <h3 className="formtitulo">Preguntas</h3>     
+            <h3 className="formtitulo titulos">Preguntas</h3>     
             <input type="text" className="funcioninput" placeholder="Nombre" id="username" name="username" required></input>
             <textarea maxLength={400} className="funcioninput funcioninput--message" placeholder="Mensaje" name="message" id="message" required></textarea>
             

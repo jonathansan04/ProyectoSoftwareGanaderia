@@ -25,10 +25,10 @@ const Contacto =() =>{
          
         <section className="sectioncontacto textocentro  ">
         <div className="cuadrocontacto">
-            <h6 className="titulos">
+            <h4 className="titulos">
             CONTACTENOS...
-            </h6>
-            <p>
+            </h4>
+            <p className="tamaletra">
             Si desea obtener más información de como aparecer en nuestro directorio de servicios o si desea adquirir las funcionalidades de nuestro software ganadero y tiene alguna duda, llena el siguiente formulario y nos estaremos comunicando.             </p>
         </div>
         </section>
@@ -37,7 +37,7 @@ const Contacto =() =>{
 
         <form className="form" ref={refForm} action="" onSubmit={handleSubmit}>
         <div className="formcont">
-            <h3 className="formtitulo">Contactenos</h3>     
+            <h3 className="formtitulo titulos">Contactenos</h3>     
             <input type="text" className="funcioninput" placeholder="Nombre" name="username" id="username" required></input>
             <input type="email" className="funcioninput" placeholder="Email" name="email" id="email" required></input>
             <input name="celular" id="celular" className="funcioninput" placeholder="Celular" required></input>

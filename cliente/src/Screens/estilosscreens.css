@@ -27,6 +27,7 @@
   padding: 5px 5px;
   border-radius: 5px;
   width: 50%;
+  text-align: justify;
 }
 
 .quienesmis{
@@ -43,14 +44,18 @@
   margin: 0 auto;
   width: 90%;
   display: flex;
+  text-align: justify;
 }
 
 .titulos{
   font: bolder;
+  text-shadow: 0 0 3px green, 0 0 1px #0000ff;
   text-align: center;
   text-decoration: solid;
+
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 
 .form{
 
@@ -99,6 +104,7 @@ grid-auto-columns: 100%;
   border-radius: .2em;
   cursor: pointer;
   font-weight: 400;
+ 
 }
 
 
@@ -114,6 +120,7 @@ figure {
     position: absolute;
     left: 20px;
     top: 200px;
+    
 }
 
 .gallery-container {
@@ -149,6 +156,7 @@ figure {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+    
 }
 .nav-button > span {
   font-size: 30px;
@@ -171,6 +179,18 @@ figure {
  
 }
 
+.cuadroinicios{
+  background: rgb(228, 228, 228);
+  color: #333;
+  border: 2px solid #333;
+  margin: 10px;
+  padding: 10px;
+  width: 50%;
+  border-radius: 5px;
+  box-shadow: 5px 5px gray;
+  left: 600%;
+  text-align: justify;
+}
 .sectioncuadro{
   margin: 0 auto;
   width: 50%;
@@ -205,7 +225,7 @@ figure {
   width: 80%;
   border-radius: 5px;
   box-shadow: 5px 5px gray;
-
+  text-align: justify;
  
 }
 
@@ -214,6 +234,7 @@ figure {
   width: 50%;
   left: 35px;
   position: relative;
+  text-align: justify;
 }
 
 
@@ -283,6 +304,12 @@ figure {
   align-items: center;
   text-align: center;
   width: 95%;
+}
+
+.social{
+  color: white;
+  padding: 5px;
+  width: 5px;
 }
 
 
@@ -395,8 +422,192 @@ figure {
   
 } */
 
-@media (max-width:500px) {
+@media (max-width:550px) {
   .form{
     padding: 3.5em 1em;
   }
+
+  .sectionfuncion{
+    width: 90%;
+    text-align: center;
+    flex-direction: column;
+    display: contents;
+
+  }
+
+  .sectionquehacer{
+    width: 90%;
+    text-align: center;
+    flex-direction: column;
+    display: contents;
+   
+    
+  }
+
+  .sectionprecios{
+    width: 95%;
+    position: relative;
+    left: 80px;
+    flex-direction: column;
+    display: contents;
+ }
+
+ .sectionfunciona{
+  width: 95%;
+    position: relative;
+    left: 80px;
+    flex-direction: column;
+    display: contents;
+ }
+
+ .cuadroinicio{
+  margin: 10px;
+  padding: 10px;
+  width: 80%;
+ }
+
+ #gallery {
+  max-width: 90%;
+  height: 50%;
+  margin: auto;
+  overflow: hidden;
+  position: absolute;
+  left: 20px;
+  top: 880px;
+  
+}
+
+
+.gallery-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  
+}
+
+.gallery-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: contents;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+}
+
+/* Navegación de la galería */
+.gallery-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  position: absolute;
+  top: 15%;
+  transform: translateY(-50%);
+  
+}
+
+.nav-button {
+  background-color: rgba(0,0,0, .3);
+  color: rgb(249, 246, 246);
+  border: none;
+  padding: 1px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  
+}
+.nav-button > span {
+font-size: 15px;
+}
+.nav-button:hover {
+  background-color: #126d23;
+}
+
+.cuadroinicios{
+  background: rgb(228, 228, 228);
+  color: #333;
+  border: 2px solid #333;
+  margin: 100px;
+  padding: 20px;
+  width: 80%;
+  border-radius: 5px;
+  box-shadow: 5px 5px gray;
+  left: 20%;
+  text-align: justify;
+}
+.sectioncuadro{
+  
+  margin: 0 auto;
+  width: 50%;
+  display: contents;
+}
+
+.cuadroinicios{
+  padding: 20px;
+  width: 70%;
+  margin: 20px 30px 230px 40px;
+}
+
+.tamaletra{
+  font-size: small;
+}
+
+.contenedor{
+  margin: 0 auto;
+  width: 80%;
+  display: contents;
+
+}
+
+
+.public{
+  background: rgb(228,228,228);
+    color: cadetblue;
+    border: 2px solid #333;
+    margin: 10px 20px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+   text-align: left;
+    box-shadow: 5px 5px gray;
+}
+
+.sectionpublicidad{
+  width: 60%;
+  display: contents;
+}
+.cuadropublicidad{
+  width: 80%;
+  padding: 15px;
+  margin: 20px;
+  
+}
+
+.sectionquienesmis{
+  margin: 0 auto;
+  width: 80%;
+  display: contents;
+}
+
+.articuloquienes{
+  width:80%;
+  padding: 10px;
+  margin: 30px;
+}
+
+.sectioncontacto{
+  width: 80%;
+  display: contents;
+  padding: 10px;
+  margin-left: 10%;
+}
+
+.cuadrocontacto{
+  padding: 10px;
+  margin-left: 10%;
+}
+
+
+
 }
