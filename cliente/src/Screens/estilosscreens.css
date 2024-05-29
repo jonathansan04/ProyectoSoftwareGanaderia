@@ -473,7 +473,7 @@ figure {
   overflow: hidden;
   position: absolute;
   left: 20px;
-  top: 200px;
+  top: 880px;
   
 }
 
@@ -546,7 +546,7 @@ font-size: 15px;
 .cuadroinicios{
   padding: 20px;
   width: 70%;
-  margin: 250px 30px 30px 40px;
+  margin: 20px 30px 230px 40px;
 }
 
 .tamaletra{
