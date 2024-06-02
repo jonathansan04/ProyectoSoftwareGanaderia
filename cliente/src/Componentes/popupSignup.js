@@ -41,14 +41,14 @@ export default function PopupSignup() {
             <input type="text" id="numero_id" name="numero_id" placeholder="Ingresar número ID" maxLength={20} />
           </div>
           <div className="form-element">
-            <label htmlFor="correo">Email</label>
-            <input type="text" id="correo" name="correo" placeholder="Ingresar Email" maxLength={50} />
+            <label htmlFor="ucorreo">Email</label>
+            <input type="text" id="ucorreo" name="correo" placeholder="Ingresar Email" maxLength={50} />
           </div>
           <div className="form-element">
-            <label htmlFor="contraseña">Contraseña</label>
-            <input type="password" id="contraseña" name="contraseña" placeholder="Ingresar contraseña" minLength={4} maxLength={50} />
+            <label htmlFor="ucontraseña">Contraseña</label>
+            <input type="password" id="ucontraseña" name="contraseña" placeholder="Ingresar contraseña" minLength={4} maxLength={50} />
           </div>
-          <button type="submit" onClick={submit}>Aceptar</button>
+          <button className='submit' type="submit" onClick={submit}>Aceptar</button>
         </form>
       </div>
     </div>

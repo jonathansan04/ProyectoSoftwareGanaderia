@@ -2,10 +2,16 @@ let baseUrl = "http://localhost:5000",
     get = (url) => fetch(baseUrl + url)
         .then((e) => e.json())
         .catch((e) => console.log({ GET: e })),
-    post = (url, data) => fetch(baseUrl + url, {
+    post = (url, data, ctype) => fetch(baseUrl + url, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": ctype || "application/json" },
         body: JSON.stringify(data)
+    })
+        .then((e) => e.json())
+        .catch((e) => console.log({ POST: e })),
+    postForm = (url, data) => fetch(baseUrl + url, {
+        method: "POST",
+        body: data
     })
         .then((e) => e.json())
         .catch((e) => console.log({ POST: e })),
@@ -20,4 +26,4 @@ let baseUrl = "http://localhost:5000",
         .then((e) => e.json())
         .catch((e) => console.log({ DELETE: e }));
 
-export { get, post, put, del };
+export { get, post, postForm, put, del };

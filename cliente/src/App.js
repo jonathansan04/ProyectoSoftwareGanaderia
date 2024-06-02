@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Contact from "./Screens/contacto";
 import Funcion from "./Screens/funcion";
@@ -14,11 +14,19 @@ import Auth from "./Suports/auth";
 import logo from "../src/img/screen/logoprueba.jpg";
 import DynamicForm from "./Componentes/dynamicForm";
 import DynamicTable from "./Componentes/dynamicTable";
-import { FaFacebookSquare,FaInstagramSquare, FaTwitterSquare } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import { FaFacebookSquare, FaInstagramSquare, FaTwitterSquare } from 'react-icons/fa';
 
 function App() {
+  let link = '';
+  let navigate = useNavigate();
+  let [login, setLogin] = useState(localStorage.getItem('Sessionid'));
   let show = (id) => document.getElementById(id).classList.remove('hide');
-  let link ='';
+  const logout = () => {
+    setLogin(null);
+    localStorage.removeItem('Sessionid');
+    navigate('/app/inicio');
+  }
   return (
     <div className="App">
       <div >
@@ -29,20 +37,21 @@ function App() {
 
           </div>
           <PopupSignup />
-          <PopupSignin />
+          <PopupSignin setLogin={setLogin} />
         </div>
       </div>
 
       <div className="sign">
-        <button id="btnsignup" onClick={() => show("popsignup")}>Sign up</button>
-        <button id="btnsignin" onClick={() => show("popsignin")}>Sign in</button>
+        {!login && <><button id="btnsignup" onClick={() => show("popsignup")}>Sign up</button>
+          <button id="btnsignin" onClick={() => show("popsignin")}>Sign in</button></>}
+        {login && <button id="btnlogout" onClick={logout}>Cerrar Sesión</button>}
       </div >
 
       <h3 className="slogan">Lleva la mejor solución para el manejo de tú ganaderia</h3>
 
       <div >
         <nav className="navv">
-          
+
           <NavBar />
         </nav>
         <Routes>

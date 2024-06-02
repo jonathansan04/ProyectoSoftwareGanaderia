@@ -1,6 +1,7 @@
 import { collections, validate, invalidate } from "../base";
 import { db } from "../connection";
 import constraint from "./ConstraintController";
+import { insert } from "../Util/util";
 
 const keys = Object.keys(collections);
 const controllers = {};
@@ -32,15 +33,10 @@ keys.forEach(key => controllers[key] = {
             : res.status(404).json({ message: `${key} no encontrado`, success: false }))
         .catch(e => res.status(500).json({ message: e.message, success: false })),
 
-    post: async (req, res) => validate(key, req.body)
-        ? !invalidate(key, req.body)
-            ? !(await cons("post", key, req.body)).msg
-                ? db.collection(key).add(obj)
-                    .then(e => res.status(201).json({ message: `${key} creado`, success: true, obj: obj }))
-                    .catch(e => res.status(500).json({ message: e.message, success: false }))
-                : res.status(400).json({ message: msg, success: false })
-            : res.status(400).json({ message: "Campos invalidos", success: false})
-        : res.status(400).json({ message: "Faltan campos", success: false }),
+    post: async (req, res) => {
+        let { message, success, obj, status } = await insert(db, key, req.body);
+        res.status(status).json({ message, success, obj, status });
+    },
 
     put: (req, res) => db.collection(key).doc(req.params.id).get()
         .then(async e => e.exists

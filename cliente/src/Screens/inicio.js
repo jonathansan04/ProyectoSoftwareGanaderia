@@ -37,10 +37,6 @@ const Inicio =() =>{
             return () => stopAutoplay();
         }, []);
     
-        const handleButtonClick = () => {
-            stopAutoplay();
-        };
-    
     return (
         <div>
         
@@ -61,21 +57,21 @@ const Inicio =() =>{
 
         <div>
         <section id="gallery">
-        <div class="gallery-container">
-        <figure class="gallery-item">
+        <div className="gallery-container">
+        <figure className="gallery-item">
         <img src={imagen2}  alt="Imagen 1"/>
             
         </figure>
-        <figure class="gallery-item">
+        <figure className="gallery-item">
         <img src={imagen1}  alt="Imagen 2"/>
 
         </figure>
-        <figure class="gallery-item">
+        <figure className="gallery-item">
         <img src={imagen3}  alt="Imagen 3"/>
 
         </figure>
     </div>
-    <nav class="gallery-navigation">
+    <nav className="gallery-navigation">
         <button className="nav-button prev-button" onClick={() => navigate(-1)}><span>&#60;</span></button>
         <button className="nav-button prev-button" onClick={() => navigate(1)}><span>&#62;</span></button>
      

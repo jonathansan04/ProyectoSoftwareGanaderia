@@ -2,6 +2,7 @@ import { post, get } from '../Suports/rest';
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './styles/dynamicForm.css';
+import PopupFile from './popupFile';
 
 export default function DynamicForm() {
     const { collection } = useParams();
@@ -15,6 +16,7 @@ export default function DynamicForm() {
                 response = await post(`/${collection}`, data);
             console.log(response);
         };
+    let show = (id) => document.getElementById(id).classList.remove('hide');
     useEffect(() => {
         get(`/Fields/${collection}`).then(e => e.success ? setFields(e.fields) : navigate('/NotFound'));
     }, [collection, navigate]);
@@ -39,6 +41,7 @@ export default function DynamicForm() {
 
     return (
         <div className="cont">
+          <PopupFile collection={collection} />
             <form onSubmit={submit}>
                 {fields === null && <p>Cargando...</p>}
                 {fields &&
@@ -100,10 +103,13 @@ export default function DynamicForm() {
                         </div>
                     ))}
                 {fields && (
-                    <div className="submit-container">
-                        <button type="submit" className="submit">
-                            Enviar
-                        </button>
+                    <div style={{ position: 'relative' }}>
+                        <div className="submit-container">
+                            <button type="submit" className="submit">
+                                Enviar
+                            </button>
+                            <button className='submit' type='button' id="btnimport" onClick={() => show("popfile")}>Importar</button>
+                        </div>
                     </div>
                 )}
             </form>

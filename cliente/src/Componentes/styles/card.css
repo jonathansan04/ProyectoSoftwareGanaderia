@@ -25,6 +25,11 @@
     align-self: center;
 }
 
+.iconoformato{
+    width: 70px;
+    height: auto;
+}
+
 .botones {
     display: flex;
     justify-content: space-evenly;

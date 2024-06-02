@@ -3,7 +3,7 @@ import { post } from '../Suports/rest';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-export default function PopupSignup() {
+export default function PopupSignin({ setLogin }) {
   const navigate = useNavigate();
   const [showerror, setShowerror] = useState(null);
   let hide = (e) => e.target.classList.contains('popup') && document.getElementById("popsignin").classList.add('hide'),
@@ -16,6 +16,7 @@ export default function PopupSignup() {
         localStorage.setItem('Sessionid', response.id);
         setShowerror(null);
         document.getElementById("popsignin").classList.add('hide');
+        setLogin(response.id);
         navigate('/app/');
       }
       else setShowerror(response.message);
@@ -29,18 +30,18 @@ export default function PopupSignup() {
         <form className='formpopup'>
           <h2>Iniciar sesion</h2>
           <div className="form-element">
-            <label htmlFor="correo">Email</label>
-            <input type="text" id="correo" name="correo" placeholder="Ingresar Email" />
+            <label htmlFor="icorreo">Email</label>
+            <input type="text" id="icorreo" name="correo" placeholder="Ingresar Email" />
           </div>
           <div className="form-element">
-            <label htmlFor="contraseña">Password</label>
-            <input type="password" id="contraseña" name="contraseña" placeholder="Ingresar contraseña" />
+            <label htmlFor="icontraseña">Password</label>
+            <input type="password" id="icontraseña" name="contraseña" placeholder="Ingresar contraseña" />
           </div>
           <div className="form-element">
             <input type="checkbox" id="remember-me" />
             <label htmlFor="remember-me">Recordar</label>
           </div>
-          <button id="submit" type='submit' onClick={submit}>Iniciar</button>
+          <button className='submit' id="submit" type='submit' onClick={submit}>Iniciar</button>
           {showerror && <p style={{ color: "#A22" }}>{showerror}</p>}
         </form>
       </div>

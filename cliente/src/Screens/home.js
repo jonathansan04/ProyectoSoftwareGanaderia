@@ -1,19 +1,12 @@
-import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { get } from '../Suports/rest';
 import './estilosscreens.css'
 import Card from '../Componentes/card';
 
 const Home = ({ sesionid }) => {
-    let navigate = useNavigate();
     const [collections, setCollections] = useState([]);
 
     useEffect(() => { get("/Collections").then(e => setCollections(e.collections)) }, []);
-
-    const logout = () => {
-        localStorage.removeItem('Sessionid');
-        navigate('/app/inicio');
-    }
 
 
     return (
@@ -115,8 +108,6 @@ const Home = ({ sesionid }) => {
                     </button>
                 </div>
             </section> */}
-
-            <button onClick={logout}>Cerrar Sesión</button>
         </div>
     )
 };

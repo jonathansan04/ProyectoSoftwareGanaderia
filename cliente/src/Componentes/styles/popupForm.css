@@ -27,7 +27,7 @@
 .formpopup {
     display: flex;
     flex-direction: column;
-    background-color: #b4cca47a;
+    background-color: #a4ccc0c5;
     padding: 20px;
     border-radius: 10px;
     font-weight: bolder;
@@ -43,7 +43,7 @@
     align-self: baseline;
 }
 
-.formpopup button[type="submit"] {
+/* .formpopup button[type="submit"] {
     background: #007bff;
     color: #fff;
     border: none;
@@ -51,7 +51,7 @@
     cursor: pointer;
     margin-top: 10px;
     border-radius: 5px;
-}
+} */
 
 .hide {
     display: none;
@@ -64,6 +64,28 @@
     color: #1a79ca;
     text-decoration: none;
     font-weight: 600;
+}
+
+input[type="file"] {
+    border-radius: 5px;
+    padding: 2px;
+    margin: 1rem;
+    outline: none;
+    border: 2px solid #378A9B;
+    background-color: #28A745;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+}
+
+.sec-formato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.sec-formato:hover {
+    background-color: #28a7463f;
+    cursor: pointer;
 }
 /*
 .popupregis{
