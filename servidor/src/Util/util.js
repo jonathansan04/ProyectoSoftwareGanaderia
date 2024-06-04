@@ -1,4 +1,5 @@
 import constraint from "../Controllers/ConstraintController";
+import xlsx from "xlsx";
 import { validate, invalidate } from "../base";
 
 const res = {
@@ -28,5 +29,20 @@ const insert = async (db, col, data) => {
         return { ...res, ...{ message: e.message, status: 500 } };
     }
 };
+const readXlsx = (buffer) => {
+    const workbook = xlsx.read(buffer, { type: 'buffer' });
+    const sheet = workbook.Sheets["DATOS"];
+    let data = xlsx.utils.sheet_to_json(sheet);
+    data.forEach(d => {
+        Object.keys(d).forEach(e => {
+            const newkey = e.replace(/\s+/g, "_").toLowerCase().replace("n.", "id")
+            if (e !== newkey) {
+                d[newkey] = d[e];
+                delete d[e];
+            }
+        });
+    });
+    return data;
+};
 
-export default { excelDateToJSDate, insert };
+export default { excelDateToJSDate, insert, readXlsx };

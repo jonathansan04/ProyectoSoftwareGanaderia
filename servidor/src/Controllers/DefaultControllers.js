@@ -1,7 +1,7 @@
 import { collections, validate, invalidate } from "../base";
 import { db } from "../connection";
 import constraint from "./ConstraintController";
-import { insert } from "../Util/util";
+import Util from "../Util/util";
 
 const keys = Object.keys(collections);
 const controllers = {};
@@ -34,7 +34,8 @@ keys.forEach(key => controllers[key] = {
         .catch(e => res.status(500).json({ message: e.message, success: false })),
 
     post: async (req, res) => {
-        let { message, success, obj, status } = await insert(db, key, req.body);
+        console.log("req.body", req.body);
+        let { message, success, obj, status } = await Util.insert(db, key, req.body);
         res.status(status).json({ message, success, obj, status });
     },
 

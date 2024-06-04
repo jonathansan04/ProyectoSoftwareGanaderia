@@ -1,7 +1,6 @@
 import { db } from "../connection";
 import bcrypt from "bcrypt";
 import { typeCollections, collections as Collections } from "../base";
-import xlsx from "xlsx";
 import Util from "../Util/util";
 
 let login = (req, res) => {
@@ -31,26 +30,13 @@ let login = (req, res) => {
     },
     upload = async (req, res) => {
         let { collection, id_usuario } = req.body;
-        console.log("collection", collection);
-        console.log("id_usuario", id_usuario);
         if (!req.file) {
             return res.status(400).json({ message: "No se subió ningún archivo.", success: false });
         }
-        const workbook = xlsx.read(req.file.buffer, { type: 'buffer' });
-        const sheet = workbook.Sheets["DATOS"];
-        let data = xlsx.utils.sheet_to_json(sheet);
         let errors = [];
-        data.forEach(d => {
-            Object.keys(d).forEach(e => {
-                const newkey = e.replace(/\s+/g, "_").toLowerCase().replace("n.", "id")
-                if (e !== newkey) {
-                    d[newkey] = d[e];
-                    delete d[e];
-                }
-            });
-        });
+        let data = Util.readXlsx(req.file.buffer);
+        console.log(data.length);
         Collections[collection].includes("id_usuario") && data.forEach(d => d.id_usuario = id_usuario);
-        console.log(data);
         data = data.map(async (d, i) => {
             for (const key in d) {
                 if (key.includes('fecha'))
@@ -61,13 +47,11 @@ let login = (req, res) => {
                     let field = col === 'Potrero' ? 'numero' : 'nombre';
                     let snapshot = await db.collection(col).where(field, '==', d[key]).get();
                     if (snapshot.docs.length === 0)
-                        errors.push({ row: i, message: `No se encontró ${col} con ${field} ${d[key]}` });
+                        errors.push({ row: i+1, message: `No se encontró ${col} con ${field} ${d[key]}` });
                     else {
                         d[key] = snapshot.docs[0].id;
-                        console.log(d);
                         let { message, success, obj, status } = await Util.insert(db, collection, d);
-                        console.log(message, success);
-                        !success && errors.push({ row: i, message });
+                        !success && errors.push({ row: i+1, message });
                     }
                 }
             }
